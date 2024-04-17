@@ -1,0 +1,29 @@
+Este código PHP junto con HTML forma una página web que permite editar un comando de Linux. Aquí tienes una explicación detallada del mismo:
+
+Inclusión de archivos de configuración, modelos y controladores:
+
+Se incluyen los archivos necesarios para la configuración de la base de datos (database.php), el modelo de comando (commandModel.php) y el controlador de comandos (CommandController.php). Estos archivos contienen las clases y funciones necesarias para interactuar con la base de datos y manejar los comandos de Linux.
+Inicialización de la conexión a la base de datos:
+
+Se crea una instancia de PDO para establecer una conexión a la base de datos utilizando los datos de conexión proporcionados en el archivo de configuración.
+Se establece el modo de error de PDO para lanzar excepciones en caso de errores de conexión o consultas.
+Creación de una instancia del controlador de Comandos de Linux:
+
+Se crea una instancia del controlador de comandos (CommandController) pasando la conexión a la base de datos. Esto permite al controlador interactuar con la base de datos para realizar operaciones como la obtención y actualización de comandos.
+Obtención del ID del comando a editar:
+
+Se verifica si se ha proporcionado un ID válido del comando a editar a través de la URL ($_GET['id']). Si no se proporciona, se redirige al usuario de vuelta a la lista de comandos.
+Se obtiene la información del comando de Linux utilizando el método getCommandById del controlador de comandos.
+Manejo de la actualización del comando:
+
+Si se envía el formulario de actualización (a través del método POST) y se activa el botón de actualización ($_POST['update']), se recuperan los datos del formulario.
+Se validan los datos del formulario para asegurarse de que no estén vacíos.
+Se llama al método updateCommand del controlador de comandos para actualizar el comando en la base de datos.
+Si la actualización es exitosa, se redirige al usuario de vuelta a la lista de comandos. En caso de error, se muestra un mensaje de error.
+HTML de la página:
+
+Se define una estructura HTML básica con un formulario para editar el comando.
+Se muestran los datos del comando en los campos del formulario para que el usuario pueda editarlos.
+Se incluye Bootstrap para estilos de interfaz.
+Se proporcionan botones para enviar el formulario de actualización, volver a la lista de comandos y volver a la página de inicio.
+En resumen, este código PHP maneja la lógica de edición de comandos de Linux en una aplicación web, permitiendo al usuario editar los datos de un comando específico y actualizarlos en la base de datos.

@@ -1,0 +1,24 @@
+
+Este código HTML crea una página web que presenta una barra de navegación, un contenido principal de bienvenida y una serie de paneles con imágenes, donde cada panel representa un área temática. Aquí hay una explicación detallada del código:
+
+<!DOCTYPE html>: Declara la versión del documento como HTML5.
+
+<html lang="es">: Establece el idioma principal del documento como español.
+
+<head>: Esta sección contiene metadatos y enlaces a recursos externos como hojas de estilo CSS y scripts JavaScript.
+
+Meta etiquetas: Definen el conjunto de caracteres y la escala inicial para dispositivos móviles.
+Título de la página: Define el título de la pestaña del navegador.
+Enlaces CSS: Importa la hoja de estilos de Bootstrap y define estilos personalizados para la página.
+<body>: Contiene el contenido visible de la página.
+
+Barra de navegación (<nav>): Presenta una barra de navegación con un logotipo y un botón de alternancia para dispositivos móviles. Contiene un enlace a la página de "Comandos de Linux".
+
+Contenido principal (<div class="container">): Muestra un título de bienvenida y un párrafo de introducción sobre el equipo de desarrollo.
+
+Paneles con imágenes (<div class="container">): Muestra una serie de paneles con imágenes y títulos. Cada panel representa una temática diferente. La primera imagen está activa inicialmente, mientras que las otras están ocultas. Al hacer clic en un panel, se activa y se desactivan los demás paneles.
+
+<script>: Incluye scripts JavaScript para controlar la interactividad de los paneles.
+
+El script define una función para manejar la interacción con los paneles. Cada panel es seleccionado y se le añade un evento de clic para alternar su estado activo. Cuando se hace clic en un panel, se activa y se desactivan los demás paneles. Esto se logra eliminando la clase "active" de todos los paneles y luego agregándola al panel seleccionado.
+En resumen, esta página HTML crea una experiencia interactiva donde los usuarios pueden explorar diferentes áreas temáticas al hacer clic en los paneles de imágenes, lo que activa y desactiva visualmente los paneles correspondientes.

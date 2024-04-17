@@ -1,0 +1,20 @@
+
+Este código PHP define una clase llamada CommandController, que actúa como un controlador para manejar operaciones relacionadas con comandos de Linux almacenados en una base de datos. Aquí está una explicación línea por línea del código:
+
+class CommandController { ... }: Define una clase llamada CommandController.
+
+private $db;: Declara una propiedad privada llamada $db para almacenar la conexión de base de datos.
+
+public function __construct($db) { ... }: Define un constructor que recibe una conexión de base de datos como argumento y la asigna a la propiedad $db.
+
+public function getAllCommands() { ... }: Define un método público llamado getAllCommands() que recupera todos los comandos de la base de datos y los devuelve como un array asociativo.
+
+public function getCommandById($id) { ... }: Define un método público llamado getCommandById($id) que recupera un comando específico por su ID de la base de datos y lo devuelve como un array asociativo.
+
+public function createCommand($command, $description, $ayuda, $imagen, $ejemplo) { ... }: Define un método público llamado createCommand($command, $description, $ayuda, $imagen, $ejemplo) que inserta un nuevo comando en la base de datos con los valores proporcionados.
+
+public function updateCommand($id, $command, $description, $ayuda, $imagen, $ejemplo) { ... }: Define un método público llamado updateCommand($id, $command, $description, $ayuda, $imagen, $ejemplo) que actualiza un comando existente en la base de datos con los valores proporcionados.
+
+public function deleteCommand($id) { ... }: Define un método público llamado deleteCommand($id) que elimina un comando de la base de datos por su ID.
+
+En resumen, esta clase proporciona una interfaz para interactuar con comandos de Linux almacenados en una base de datos, permitiendo la recuperación, creación, actualización y eliminación de comandos mediante métodos bien definidos. Utiliza la extensión PDO (PHP Data Objects) para interactuar con la base de datos, lo que hace que el código sea más seguro y portable.

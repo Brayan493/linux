@@ -1,0 +1,24 @@
+
+Este código PHP junto con HTML forma una página web para la creación de nuevos comandos de Linux. Aquí está una explicación detallada del código:
+
+Configuración de la conexión a la base de datos:
+
+Se incluyen los archivos de configuración de la base de datos (database.php), el modelo de comando (commandModel.php) y el controlador de comando (CommandController.php).
+Se inicializa una conexión a la base de datos utilizando PDO (PHP Data Objects), con manejo de excepciones en caso de errores de conexión.
+Creación de una instancia del controlador de comandos:
+
+Se crea una instancia del controlador de comandos (CommandController) pasando la conexión a la base de datos.
+Manejo del envío del formulario de creación:
+
+Si se ha enviado el formulario ($_SERVER['REQUEST_METHOD'] === 'POST') y se ha activado el botón de creación ($_POST['create']), se procesan los datos del formulario.
+Se recuperan los datos del formulario ($_POST['command'], $_POST['description'], $_POST['ayuda'], $_POST['imagen'], $_POST['ejemplo']) y se validan.
+Si todos los campos están completos, se intenta crear el comando utilizando el método createCommand() del controlador.
+Si la creación es exitosa, se redirige a la página de listado de comandos (index.php?page=commands). Si falla, se muestra un mensaje de error.
+HTML de la página:
+
+Se define una estructura HTML básica con un formulario para crear un nuevo comando.
+Se incluye Bootstrap para estilos de interfaz.
+Se muestra un mensaje de error si existe alguno.
+Se crea un formulario con campos para ingresar el comando, descripción, ayuda, ejemplo e imagen del comando.
+Se proporcionan botones para enviar el formulario, volver a la lista de comandos y volver a la página de inicio.
+En resumen, este código PHP maneja la lógica de creación de comandos en una base de datos y genera una página web interactiva que permite a los usuarios ingresar información para crear nuevos comandos de Linux.

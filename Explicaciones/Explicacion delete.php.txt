@@ -1,0 +1,21 @@
+Este código PHP tiene como objetivo manejar las solicitudes relacionadas con la eliminación de comandos de Linux en una aplicación web. Aquí tienes una explicación detallada del mismo:
+
+Inclusión de archivos de configuración, modelos y controladores:
+
+Se incluyen los archivos necesarios para la configuración de la base de datos (database.php), el modelo de comando (commandModel.php) y el controlador de comandos (commandController.php). Estos archivos contienen las clases y funciones necesarias para interactuar con la base de datos y manejar los comandos de Linux.
+Inicialización de la conexión a la base de datos:
+
+Se crea una instancia de PDO para establecer una conexión a la base de datos utilizando los datos de conexión proporcionados en el archivo de configuración.
+Se establece el modo de error de PDO para lanzar excepciones en caso de errores de conexión o consultas.
+Creación de una instancia del controlador de Comandos de Linux:
+
+Se crea una instancia del controlador de comandos (CommandController) pasando la conexión a la base de datos. Esto permite al controlador interactuar con la base de datos para realizar operaciones como la eliminación de comandos.
+Verificación de la solicitud POST para eliminar un comando:
+
+Se comprueba si se ha enviado una solicitud POST ($_SERVER['REQUEST_METHOD'] === 'POST') y si se ha incluido el parámetro accion con el valor 'eliminar_comando' ($_POST['accion'] === 'eliminar_comando') y el parámetro id.
+Si se cumplen estas condiciones, se procede a obtener el ID del comando de Linux a eliminar y se llama al método deleteCommand del controlador de comandos para eliminar el comando de la base de datos.
+Se imprime un mensaje de éxito o error dependiendo del resultado de la operación. Estos mensajes serán utilizados como respuestas a una solicitud AJAX realizada desde JavaScript.
+Resto del código del controlador:
+
+Este código puede contener lógica adicional para manejar otras operaciones relacionadas con los comandos de Linux, como la creación, actualización o recuperación de comandos.
+En resumen, este código PHP se encarga de manejar las solicitudes para eliminar comandos de Linux en una aplicación web, utilizando un controlador especializado para interactuar con la base de datos y ejecutar las operaciones necesarias.

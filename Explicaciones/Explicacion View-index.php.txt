@@ -1,0 +1,28 @@
+Este código PHP junto con HTML forma una página web que muestra una lista de comandos de Linux y permite realizar varias acciones, como buscar, editar y eliminar comandos. Aquí tienes una explicación detallada del mismo:
+
+Inclusión de archivos de configuración, modelos y controladores:
+
+Se incluyen los archivos necesarios para la configuración de la base de datos (database.php), el modelo de comando (commandModel.php) y el controlador de comandos (commandController.php).
+Inicialización de la conexión a la base de datos:
+
+Se crea una instancia de PDO para establecer una conexión a la base de datos utilizando los datos de conexión proporcionados en el archivo de configuración.
+Se establece el modo de error de PDO para lanzar excepciones en caso de errores de conexión o consultas.
+Creación de una instancia del controlador de Comandos de Linux:
+
+Se crea una instancia del controlador de comandos (CommandController) pasando la conexión a la base de datos. Esto permite al controlador interactuar con la base de datos para realizar operaciones como obtener todos los comandos de Linux.
+Obtención de la lista de comandos de Linux desde la base de datos:
+
+Se llama al método getAllCommands del controlador de comandos para obtener todos los comandos de Linux de la base de datos.
+HTML de la página:
+
+Se define una estructura HTML básica con una tabla para mostrar la lista de comandos.
+Se incluye Bootstrap para estilos de interfaz.
+Se proporcionan botones para crear un nuevo comando, volver a la página de inicio y actualizar la lista de comandos.
+Script JavaScript:
+
+Se incluye un script JavaScript para realizar acciones como buscar, eliminar y mostrar más detalles de un comando.
+La función buscarComando filtra los comandos en función del texto ingresado en el campo de búsqueda.
+La función eliminarComando utiliza AJAX para eliminar un comando de Linux seleccionado sin recargar la página.
+Las funciones mostrarEjemplo, mostrarDescripcion y mostrarImagen se utilizan para mostrar más detalles (ejemplo, descripción e imagen) de un comando específico cuando se hace clic en el botón "Ver más".
+Las funciones cerrarEjemplo, cerrarDescripcion y cerrarImagen se utilizan para ocultar los detalles cuando se hace clic en el botón de cierre.
+En resumen, este código PHP y HTML junto con el script JavaScript permite interactuar con una lista de comandos de Linux, proporcionando funcionalidades como búsqueda, edición y eliminación de comandos de forma dinámica sin necesidad de recargar la página completa.
